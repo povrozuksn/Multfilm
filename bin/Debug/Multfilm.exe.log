@@ -1,0 +1,208 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00413CDA в функции txEllipse() в файле c:/codeblocks/mingw/include/txlib.h на строке 13285 в модуле C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x18D4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00413CDA in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: txEllipse() at c:/codeblocks/mingw/include/txlib.h (13285)
+# 1 0x00413ED1 in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: txCircle() at c:/codeblocks/mingw/include/txlib.h (13292)
+
+# 2 0x0041D572 in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: drawSun() at C:/Users/root/source/repos/Multfilm/main.cpp (27):
+
+     25:     txSetColor (TX_NULL);
+     26:     txSetFillColor (TX_YELLOW);
+=>   27:     txCircle (x, y, r);
+     28: }
+     29: 
+
+# 3 0x0041D874 in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: main() at C:/Users/root/source/repos/Multfilm/main.cpp (56):
+
+     54:         txBegin();
+     55:         drawFon();
+=>   56:         drawSun(xSun, ySun, rSun);
+     57:         drawDom();
+     58:         drawMan();
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 28 2022 16:43:05, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Sep 28 2022 16:43:10
+
+Run file:	C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe
+Directory:	C:\Users\root\source\repos\Multfilm
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00413CDA в функции txEllipse() в файле c:/codeblocks/mingw/include/txlib.h на строке 13285 в модуле C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x18D4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00413CDA in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: txEllipse() at c:/codeblocks/mingw/include/txlib.h (13285)
+# 1 0x00413ED1 in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: txCircle() at c:/codeblocks/mingw/include/txlib.h (13292)
+
+# 2 0x0041D572 in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: drawSun() at C:/Users/root/source/repos/Multfilm/main.cpp (27):
+
+     25:     txSetColor (TX_NULL);
+     26:     txSetFillColor (TX_YELLOW);
+=>   27:     txCircle (x, y, r);
+     28: }
+     29: 
+
+# 3 0x0041D874 in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: main() at C:/Users/root/source/repos/Multfilm/main.cpp (56):
+
+     54:         txBegin();
+     55:         drawFon();
+=>   56:         drawSun(xSun, ySun, rSun);
+     57:         drawDom();
+     58:         drawMan();
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 28 2022 16:43:05, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Sep 28 2022 16:43:10
+
+Run file:	C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe
+Directory:	C:\Users\root\source\repos\Multfilm
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00413CDA в функции txEllipse() в файле c:/codeblocks/mingw/include/txlib.h на строке 13285 в модуле C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x2D10 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00413CDA in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: txEllipse() at c:/codeblocks/mingw/include/txlib.h (13285)
+# 1 0x00413ED1 in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: txCircle() at c:/codeblocks/mingw/include/txlib.h (13292)
+
+# 2 0x0041D572 in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: drawSun() at C:/Users/root/source/repos/Multfilm/main.cpp (27):
+
+     25:     txSetColor (TX_NULL);
+     26:     txSetFillColor (TX_YELLOW);
+=>   27:     txCircle (x, y, r);
+     28: }
+     29: 
+
+# 3 0x0041D87D in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: main() at C:/Users/root/source/repos/Multfilm/main.cpp (56):
+
+     54:         txBegin();
+     55:         drawFon();
+=>   56:         drawSun(xSun, ySun, rSun);
+     57:         drawDom();
+     58:         drawMan();
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 28 2022 16:43:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Sep 28 2022 16:43:54
+
+Run file:	C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe
+Directory:	C:\Users\root\source\repos\Multfilm
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x00413CDA в функции txEllipse() в файле c:/codeblocks/mingw/include/txlib.h на строке 13285 в модуле C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdRe0, Thread: 0x2D10 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00413CDA in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: txEllipse() at c:/codeblocks/mingw/include/txlib.h (13285)
+# 1 0x00413ED1 in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: txCircle() at c:/codeblocks/mingw/include/txlib.h (13292)
+
+# 2 0x0041D572 in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: drawSun() at C:/Users/root/source/repos/Multfilm/main.cpp (27):
+
+     25:     txSetColor (TX_NULL);
+     26:     txSetFillColor (TX_YELLOW);
+=>   27:     txCircle (x, y, r);
+     28: }
+     29: 
+
+# 3 0x0041D87D in C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe: main() at C:/Users/root/source/repos/Multfilm/main.cpp (56):
+
+     54:         txBegin();
+     55:         drawFon();
+=>   56:         drawSun(xSun, ySun, rSun);
+     57:         drawDom();
+     58:         drawMan();
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 28 2022 16:43:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Sep 28 2022 16:43:54
+
+Run file:	C:\Users\root\source\repos\Multfilm\bin\Debug\Multfilm.exe
+Directory:	C:\Users\root\source\repos\Multfilm
+
+--------------------------------------------------

@@ -99,11 +99,36 @@ void drawCar(int x, int y)
     txSetFillColor(RGB(255,0,0));
     txRectangle(x+840-840,y+440-440,x+1060-840,y+480-440);
     txSetFillColor(TX_BLACK);
-    txCircle(x+875-840,y+480-440,20);
-    txCircle(x+1025-840,y+480-440,20);
     txSetFillColor(TX_WHITE);
     POINT kabina[4] = {{x+875-840,y+440-440}, {x+900-840,y+405-440}, {x+970-840,y+405-440}, {x+1025-840,y+440-440}};
     txPolygon (kabina, 4);
+}
+
+void drawCircle(int x0, int y0, double a1)
+{
+    txSetColor(TX_WHITE, 3);
+    txSetFillColor(TX_BLACK);
+
+    int x1;
+    int y1;
+    int x2;
+    int y2;
+    int x3;
+    int y3;
+    int r  = 20;
+
+    txCircle (x0, y0, r);
+
+    x1 = x0 + r*cos(a1*3.14/180);
+    y1 = y0 + r*sin(a1*3.14/180);
+    x2 = x0 + r*cos((a1+120)*3.14/180);
+    y2 = y0 + r*sin((a1+120)*3.14/180);
+    x3 = x0 + r*cos((a1+240)*3.14/180);
+    y3 = y0 + r*sin((a1+240)*3.14/180);
+
+    txLine    (x0, y0, x1, y1);
+    txLine    (x0, y0, x2, y2);
+    txLine    (x0, y0, x3, y3);
 }
 
 void drawCarWithMan(int x, int y)
@@ -112,8 +137,6 @@ void drawCarWithMan(int x, int y)
     txSetFillColor(RGB(255,0,0));
     txRectangle(x+840-840,y+440-440,x+1060-840,y+480-440);
     txSetFillColor(TX_BLACK);
-    txCircle(x+875-840,y+480-440,20);
-    txCircle(x+1025-840,y+480-440,20);
     txSetFillColor(TX_WHITE);
     POINT kabina[4] = {{x+875-840,y+440-440}, {x+900-840,y+405-440}, {x+970-840,y+405-440}, {x+1025-840,y+440-440}};
     txPolygon (kabina, 4);
@@ -131,8 +154,22 @@ void drawRoad()
     txRectangle(0, 500, 1200, 600);
     txSetColor (TX_WHITE, 4);
     txSetFillColor (TX_WHITE);
-    for(int i=0; i<)
-    txRectangle(0, 545, 100, 555);
+    for(int x=0; x<1200; x+=120)
+    {
+        txRectangle(x, 545, x+100, 555);
+    }
+    for(int y=490; y<=580; y+=30)
+    {
+        txRectangle(600, y, 700, y+20);
+    }
+}
+
+void drawDialog()
+{
+    txSetColor (TX_GRAY);
+    txSetFillColor (TX_WHITE);
+    txEllipse(640, 340, 800, 410);
+    txDrawText(640, 340, 800, 410, "Привет");
 }
 
 int main()
@@ -150,6 +187,7 @@ txCreateWindow (1200, 600);
     COLORREF colorSky = RGB (168, 247, 249);
     int xCar = 800;
     int yCar = 450;
+    double aCar = 0;
 
 
     //Меняется погода
@@ -162,6 +200,10 @@ txCreateWindow (1200, 600);
         drawZenlya();
         drawDom();
         drawCar(xCar, yCar);
+        drawCircle(xCar+35, yCar+40, aCar);
+        drawCircle(xCar+185, yCar+40, aCar);
+
+
         drawDver(x_dver, y_dver);
 
         xSun = xSun + 1;
@@ -180,6 +222,8 @@ txCreateWindow (1200, 600);
         drawZenlya();
         drawDom();
         drawCar(xCar, yCar);
+        drawCircle(xCar+35, yCar+40, aCar);
+        drawCircle(xCar+185, yCar+40, aCar);
         drawDver(x_dver, y_dver);
 
         x_dver -= 1;
@@ -198,6 +242,8 @@ txCreateWindow (1200, 600);
         drawZenlya();
         drawDom();
         drawCar(xCar, yCar);
+        drawCircle(xCar+35, yCar+40, aCar);
+        drawCircle(xCar+185, yCar+40, aCar);
         drawDver(x_dver, y_dver);
         drawMan(xMan, yMan, rasmMan);
 
@@ -216,8 +262,11 @@ txCreateWindow (1200, 600);
         drawZenlya();
         drawDom();
         drawCar(xCar, yCar);
+        drawCircle(xCar+35, yCar+40, aCar);
+        drawCircle(xCar+185, yCar+40, aCar);
         drawDver(x_dver, y_dver);
         drawMan(xMan, yMan, rasmMan);
+        drawDialog();
 
         x_dver += 1;
         y_dver -= 1;
@@ -235,6 +284,8 @@ txCreateWindow (1200, 600);
         drawDom();
         drawDver(x_dver, y_dver);
         drawCar(xCar, yCar);
+        drawCircle(xCar+35, yCar+40, aCar);
+        drawCircle(xCar+185, yCar+40, aCar);
         drawMan(xMan, yMan, rasmMan);
 
         xMan = xMan + 5;
@@ -251,6 +302,8 @@ txCreateWindow (1200, 600);
         drawDom();
         drawDver(x_dver, y_dver);
         drawCarWithMan(xCar, yCar);
+        drawCircle(xCar+35, yCar+40, aCar);
+        drawCircle(xCar+185, yCar+40, aCar);
 
         txSleep(50);
         txEnd();
@@ -265,9 +318,11 @@ txCreateWindow (1200, 600);
         drawDom();
         drawDver(x_dver, y_dver);
         drawCarWithMan(xCar, yCar);
+        drawCircle(xCar+35, yCar+40, aCar);
+        drawCircle(xCar+185, yCar+40, aCar);
 
         xCar += 10;
-
+        aCar +=15;
         txSleep(10);
         txEnd();
       }
@@ -281,15 +336,18 @@ txCreateWindow (1200, 600);
         drawNebo(RGB (91, 78, 133));
         drawZenlya();
 
-        for(int i=50; i<1200; i=i+100)
+        for(int x=50; x<1200; x=x+100)
         {
-            drawTree(i);
+            drawTree(x);
         }
         drawRoad();
 
          drawCarWithMan(xCar, yCar);
+        drawCircle(xCar+35, yCar+40, aCar);
+        drawCircle(xCar+185, yCar+40, aCar);
 
         xCar += 10;
+        aCar +=15;
         txSleep(1);
         txEnd();
     }

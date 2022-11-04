@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>21-10-2022 at 17:57.17</u><br />
-Build ended on: <u>21-10-2022 at 17:57.20</u><p />
+Build started on: <u>04-11-2022 at 17:27.51</u><br />
+Build ended on: <u>04-11-2022 at 17:27.56</u><p />
 <b>-------------- Build: Debug in Multfilm (compiler: GNU GCC Compiler)---------------</b><br />
 g++.bat -Wall -fexceptions  -g     -c C:\Users\root\source\repos\Multfilm\main.cpp -o obj\Debug\main.o<br />
 ------------------------------------------------------------------------------------------------------<br />
@@ -51,20 +51,46 @@ C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawCar(int, int
 <font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:96:6: warning: no previous declaration for 'void drawCar(int, int)' [-Wmissing-declarations]</font><br />
  void drawCar(int x, int y)<br />
       ^<br />
+C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawCircle(int, int, double)':<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:107:6: warning: no previous declaration for 'void drawCircle(int, int, double)' [-Wmissing-declarations]</font><br />
+ void drawCircle(int x0, int y0, double a1)<br />
+      ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:122:13: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+     x1 = x0 + r*cos(a1*3.14/180);<br />
+             ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:123:13: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+     y1 = y0 + r*sin(a1*3.14/180);<br />
+             ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:124:13: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+     x2 = x0 + r*cos((a1+120)*3.14/180);<br />
+             ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:125:13: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+     y2 = y0 + r*sin((a1+120)*3.14/180);<br />
+             ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:126:13: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+     x3 = x0 + r*cos((a1+240)*3.14/180);<br />
+             ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:127:13: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+     y3 = y0 + r*sin((a1+240)*3.14/180);<br />
+             ^<br />
 C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawCarWithMan(int, int)':<br />
-<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:109:6: warning: no previous declaration for 'void drawCarWithMan(int, int)' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:134:6: warning: no previous declaration for 'void drawCarWithMan(int, int)' [-Wmissing-declarations]</font><br />
  void drawCarWithMan(int x, int y)<br />
       ^<br />
 C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawRoad()':<br />
-<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:127:6: warning: no previous declaration for 'void drawRoad()' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:150:6: warning: no previous declaration for 'void drawRoad()' [-Wmissing-declarations]</font><br />
  void drawRoad()<br />
+      ^<br />
+C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawDialog()':<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:167:6: warning: no previous declaration for 'void drawDialog()' [-Wmissing-declarations]</font><br />
+ void drawDialog()<br />
       ^<br />
 ------------------------------------------------------------------------------------------------------<br />
 Autosaving to the Git repository in C:/Users/root/source/repos/Multfilm/.git-auto/... <br />
 g++.exe  -o bin\Debug\Multfilm.exe obj\Debug\main.o     -mwindows<br />
 Output size is 2,17 MB<br />
-<font color="#0000ff">Process terminated with status 0 (0 minutes, 3 seconds)</font><br />
-<font color="#0000ff">0 errors, 12 warnings (0 minutes, 3 seconds)</font><br />
+<font color="#0000ff">Process terminated with status 0 (0 minutes, 4 seconds)</font><br />
+<font color="#0000ff">0 errors, 20 warnings (0 minutes, 4 seconds)</font><br />
 </tt>
 </body>
 </html>

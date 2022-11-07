@@ -39,6 +39,7 @@ void drawDver(int x_dver, int y_dver)
     //дверь
     //x_dver=460
     //y_dver=380
+    txSetColor (TX_BLACK);
     txSetFillColor (RGB(255,188,121));
     POINT dver[4] = {{360, 380}, {x_dver, y_dver}, {x_dver, y_dver+170}, {360, 550}};
     txPolygon (dver, 4);
@@ -84,13 +85,6 @@ void drawTree(int x)
     txSetFillColor (RGB (79, 240, 107));
     txEllipse(x+680-710, 170, x+750-710, 300);
     txEllipse(x+680-710, 250, x+750-710, 380);
-}
-
-void interer()
-{
-    txSetColor (TX_WHITE);
-    txSetFillColor (TX_WHITE);
-    txRectangle(0, 0, 1200, 600);
 }
 
 void drawCar(int x, int y)
@@ -162,6 +156,37 @@ void drawRoad()
     {
         txRectangle(600, y, 700, y+20);
     }
+}
+
+void drawCityFon()
+{
+    txSetColor (RGB (91, 78, 133));
+    txSetFillColor (RGB (91, 78, 133));
+    txRectangle(0, 0, 1200, 600);
+    txSetColor (RGB (0, 0, 100));
+    txSetFillColor (RGB (0, 0, 100));
+    txRectangle(0, 400, 1200, 600);
+}
+
+void drawBuilding(int x, int y, int w, int h)
+{
+    //x=70 y=400 w=150 h=370
+    txSetColor (TX_WHITE);
+    txSetFillColor (TX_BLACK);
+    txRectangle(x, y-h, x+w, y);
+
+    txSetColor (TX_WHITE);
+    txSetFillColor (TX_WHITE);
+
+    for(int j=0; j<(h/30); j++)
+    {
+        for(int i=0; i<(w/30); i++)
+        {
+            txRectangle((x+10)+(30*i), (y-h+10)+(30*j), (x+30)+(30*i), (y-h+30)+(30*j));
+        }
+    }
+
+
 }
 
 void drawDialog()
@@ -274,6 +299,7 @@ txCreateWindow (1200, 600);
         txEnd();
     }
 
+    //Человек идет к машине
     while(xMan < 850)
     {
         txBegin();
@@ -293,6 +319,7 @@ txCreateWindow (1200, 600);
         txEnd();
     }
 
+    //Человек садится в машину
         txBegin();
         drawNebo(RGB (91, 78, 133));
         drawSun(xSun);
@@ -307,6 +334,7 @@ txCreateWindow (1200, 600);
         txSleep(50);
         txEnd();
 
+    //Машина едет
      while(xCar < 1250)
      {
         txBegin();
@@ -351,11 +379,15 @@ txCreateWindow (1200, 600);
         txEnd();
     }
 
+    //Человек идет по ночному городу
     xMan = -10;
     while(xMan < 500)
     {
         txBegin();
-        interer();
+        drawCityFon();
+        drawBuilding(70,  400, 160, 370);
+        drawBuilding(250, 400, 250, 200);
+        drawBuilding(530, 400, 460, 300);
         drawMan(xMan, yMan, 1);
 
         xMan = xMan + 5;

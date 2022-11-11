@@ -1,4 +1,7 @@
 # depslib dependency file v1.0
-1667568471 source:c:\users\root\source\repos\multfilm\main.cpp
+1668174900 source:c:\users\root\source\repos\multfilm\main.cpp
+	"TXLib.h"
+
+1667786266 source:c:\users\root\source\repos\multfilm\multfilm-main\main.cpp
 	"TXLib.h"
 

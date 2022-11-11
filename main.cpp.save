@@ -52,7 +52,7 @@ void drawSun(int x)
     txCircle (x, 100, 50);
 }
 
-void drawMan(int x, int y, double rasm)
+void drawMan(int x, int y, float rasm)
 {
     //Человек
     txSetColor (TX_BLACK, 4);
@@ -168,7 +168,7 @@ void drawCityFon()
     txRectangle(0, 400, 1200, 600);
 }
 
-void drawBuilding(int x, int y, int w, int h)
+void drawBuilding(int x, int y, int w, int h, int win[])
 {
     //x=70 y=400 w=150 h=370
     txSetColor (TX_WHITE);
@@ -176,16 +176,20 @@ void drawBuilding(int x, int y, int w, int h)
     txRectangle(x, y-h, x+w, y);
 
     txSetColor (TX_WHITE);
-    txSetFillColor (TX_WHITE);
-
-    for(int i=0; i<(w/30); i++)
+    int q=0;
+    for(int j=0; j<(h/30); j++)
     {
-        for(int j=0; j<(h/30); j++)
+        for(int i=0; i<(w/30); i++)
         {
-            txRectangle((x+10)+(30*i), y-h+10, (x+30)+(30*i), y-h+30);
+            if (win[q]%3 == 0)
+            txSetFillColor (TX_WHITE);
+            else
+            txSetFillColor (TX_BLACK);
+            txRectangle((x+10)+(30*i), (y-h+10)+(30*j), (x+30)+(30*i), (y-h+30)+(30*j));
+            q++;
         }
     }
-    
+
 
 }
 
@@ -195,6 +199,17 @@ void drawDialog()
     txSetFillColor (TX_WHITE);
     txEllipse(640, 340, 800, 410);
     txDrawText(640, 340, 800, 410, "Привет");
+}
+
+void drawBac(int x, int y, double razm)
+{
+    txSetColor(TX_BLACK,2);
+    txSetFillColor(TX_RED);
+    POINT bac[17] = {{x-120*razm,y},         {x-50*razm,y-30*razm},   {x-100*razm,y-130*razm},{x-20*razm,y-60*razm}, {x,y-140*razm},
+                     {x+30*razm,y-60*razm},  {x+100*razm,y-130*razm}, {x+60*razm,y-30*razm},  {x+130*razm,y},        {x+60*razm,y+20*razm},
+                     {x+110*razm,y+100*razm},{x+20*razm,y+60*razm},   {x,y+120*razm},         {x-20*razm,y+60*razm}, {x-120*razm,y+120*razm},
+                     {x-60*razm,y+10*razm},  {x-120*razm,y}};
+    txPolygon (bac, 17);
 }
 
 int main()
@@ -213,6 +228,7 @@ txCreateWindow (1200, 600);
     int xCar = 800;
     int yCar = 450;
     double aCar = 0;
+    int win[100];
 
 
     //Меняется погода
@@ -380,20 +396,57 @@ txCreateWindow (1200, 600);
     }
 
     //Человек идет по ночному городу
+
+    for (int i=0; i<100; i++)
+    {
+        win[i] = random(0, 1000);
+    }
+
     xMan = -10;
     while(xMan < 500)
     {
         txBegin();
         drawCityFon();
-        drawBuilding(70,  400, 150, 370);
-        drawBuilding(250, 400, 250, 200);
-        drawBuilding(530, 400, 450, 300);
-        drawMan(xMan, yMan, 1);
+        drawBuilding(70,  400, 160, 370, win);
+        drawBuilding(250, 400, 250, 200, win);
+        drawBuilding(530, 400, 460, 300, win);
+        drawMan(xMan, yMan, 10);
 
         xMan = xMan + 5;
         txSleep(1);
         txEnd();
     }
+
+    while(rasmMan > 0.2)
+    {
+        txBegin();
+        drawCityFon();
+        drawBuilding(70,  400, 160, 370, win);
+        drawBuilding(250, 400, 250, 200, win);
+        drawBuilding(530, 400, 460, 300, win);
+        drawMan(xMan, yMan, rasmMan);
+
+        rasmMan -= 0.01;
+        txSleep(1);
+        txEnd();
+    }
+    
+    razmBac = 0;
+    while(rasmMan > 0.2)
+    {
+        txBegin();
+        drawCityFon();
+        drawBuilding(70,  400, 160, 370, win);
+        drawBuilding(250, 400, 250, 200, win);
+        drawBuilding(530, 400, 460, 300, win);
+        drawMan(xMan, yMan, rasmMan);
+        drawBac(int x, int y, double razm)
+
+        rasmMan -= 0.01;
+        txSleep(1);
+        txEnd();
+    }
+    
 
 txTextCursor (false);
 return 0;

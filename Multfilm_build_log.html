@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>07-11-2022 at 17:52.36</u><br />
-Build ended on: <u>07-11-2022 at 17:52.40</u><p />
+Build started on: <u>11-11-2022 at 17:55.00</u><br />
+Build ended on: <u>11-11-2022 at 17:55.08</u><p />
 <b>-------------- Build: Debug in Multfilm (compiler: GNU GCC Compiler)---------------</b><br />
 g++.bat -Wall -fexceptions  -g     -c C:\Users\root\source\repos\Multfilm\main.cpp -o obj\Debug\main.o<br />
 ------------------------------------------------------------------------------------------------------<br />
@@ -31,10 +31,53 @@ C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawSun(int)':<b
 <font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:48:6: warning: no previous declaration for 'void drawSun(int)' [-Wmissing-declarations]</font><br />
  void drawSun(int x)<br />
       ^<br />
-C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawMan(int, int, double)':<br />
-<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:55:6: warning: no previous declaration for 'void drawMan(int, int, double)' [-Wmissing-declarations]</font><br />
- void drawMan(int x, int y, double rasm)<br />
+C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawMan(int, int, float)':<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:55:6: warning: no previous declaration for 'void drawMan(int, int, float)' [-Wmissing-declarations]</font><br />
+ void drawMan(int x, int y, float rasm)<br />
       ^<br />
+In file included from C:\Users\root\source\repos\Multfilm\main.cpp:1:0:<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:62:22: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+15*rasm, x,         y+70*rasm); //тело<br />
+                      ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:62:44: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+15*rasm, x,         y+70*rasm); //тело<br />
+                                            ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:63:22: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+70*rasm, x-30*rasm, y+120*rasm); //ноги<br />
+                      ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:63:33: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+70*rasm, x-30*rasm, y+120*rasm); //ноги<br />
+                                 ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:63:45: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+70*rasm, x-30*rasm, y+120*rasm); //ноги<br />
+                                             ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:64:22: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+70*rasm, x+30*rasm, y+120*rasm); //ноги<br />
+                      ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:64:33: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+70*rasm, x+30*rasm, y+120*rasm); //ноги<br />
+                                 ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:64:45: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+70*rasm, x+30*rasm, y+120*rasm); //ноги<br />
+                                             ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:65:22: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+30*rasm, x-30*rasm, y+80*rasm); //руки<br />
+                      ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:65:33: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+30*rasm, x-30*rasm, y+80*rasm); //руки<br />
+                                 ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:65:44: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+30*rasm, x-30*rasm, y+80*rasm); //руки<br />
+                                            ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:66:22: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+30*rasm, x+30*rasm, y+80*rasm); //руки<br />
+                      ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:66:33: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+30*rasm, x+30*rasm, y+80*rasm); //руки<br />
+                                 ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:66:44: warning: conversion to 'float' from 'int' may alter its value [-Wconversion]</font><br />
+     txLine  (x, y+30*rasm, x+30*rasm, y+80*rasm); //руки<br />
+                                            ^<br />
 C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawCloud(int, int)':<br />
 <font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:69:6: warning: no previous declaration for 'void drawCloud(int, int)' [-Wmissing-declarations]</font><br />
  void drawCloud(int x, int y)<br />
@@ -81,20 +124,160 @@ C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawCityFon()':<
 <font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:161:6: warning: no previous declaration for 'void drawCityFon()' [-Wmissing-declarations]</font><br />
  void drawCityFon()<br />
       ^<br />
-C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawBuilding(int, int, int, int)':<br />
-<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:171:6: warning: no previous declaration for 'void drawBuilding(int, int, int, int)' [-Wmissing-declarations]</font><br />
- void drawBuilding(int x, int y, int w, int h)<br />
+C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawBuilding(int, int, int, int, int*)':<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:171:6: warning: no previous declaration for 'void drawBuilding(int, int, int, int, int*)' [-Wmissing-declarations]</font><br />
+ void drawBuilding(int x, int y, int w, int h, int win[])<br />
       ^<br />
 C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawDialog()':<br />
-<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:192:6: warning: no previous declaration for 'void drawDialog()' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:196:6: warning: no previous declaration for 'void drawDialog()' [-Wmissing-declarations]</font><br />
  void drawDialog()<br />
       ^<br />
+C:\Users\root\source\repos\Multfilm\main.cpp: In function 'void drawBac(int, int, double)':<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:204:6: warning: no previous declaration for 'void drawBac(int, int, double)' [-Wmissing-declarations]</font><br />
+ void drawBac(int x, int y, double razm)<br />
+      ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:24: warning: narrowing conversion of '((double)x - (razm * 1.2e+2))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+     POINT bac[17] = {{x-120*razm,y},         {x-50*razm,y-30*razm},   {x-100*razm,y-130*razm},{x-20*razm,y-60*razm}, {x,y-140*razm},<br />
+                        ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:24: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:48: warning: narrowing conversion of '((double)x - (razm * 5.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+     POINT bac[17] = {{x-120*razm,y},         {x-50*razm,y-30*razm},   {x-100*razm,y-130*razm},{x-20*razm,y-60*razm}, {x,y-140*razm},<br />
+                                                ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:48: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:58: warning: narrowing conversion of '((double)y - (razm * 3.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+     POINT bac[17] = {{x-120*razm,y},         {x-50*razm,y-30*razm},   {x-100*razm,y-130*razm},{x-20*razm,y-60*razm}, {x,y-140*razm},<br />
+                                                          ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:58: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:73: warning: narrowing conversion of '((double)x - (razm * 1.0e+2))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+     POINT bac[17] = {{x-120*razm,y},         {x-50*razm,y-30*razm},   {x-100*razm,y-130*razm},{x-20*razm,y-60*razm}, {x,y-140*razm},<br />
+                                                                         ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:73: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:84: warning: narrowing conversion of '((double)y - (razm * 1.3e+2))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+     POINT bac[17] = {{x-120*razm,y},         {x-50*razm,y-30*razm},   {x-100*razm,y-130*razm},{x-20*razm,y-60*razm}, {x,y-140*razm},<br />
+                                                                                    ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:84: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:97: warning: narrowing conversion of '((double)x - (razm * 2.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+     POINT bac[17] = {{x-120*razm,y},         {x-50*razm,y-30*razm},   {x-100*razm,y-130*razm},{x-20*razm,y-60*razm}, {x,y-140*razm},<br />
+                                                                                                 ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:97: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:107: warning: narrowing conversion of '((double)y - (razm * 6.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+     POINT bac[17] = {{x-120*razm,y},         {x-50*razm,y-30*razm},   {x-100*razm,y-130*razm},{x-20*razm,y-60*razm}, {x,y-140*razm},<br />
+                                                                                                           ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:107: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:122: warning: narrowing conversion of '((double)y - (razm * 1.4e+2))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+     POINT bac[17] = {{x-120*razm,y},         {x-50*razm,y-30*razm},   {x-100*razm,y-130*razm},{x-20*razm,y-60*razm}, {x,y-140*razm},<br />
+                                                                                                                          ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:208:122: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:24: warning: narrowing conversion of '((double)x + (razm * 3.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+30*razm,y-60*razm},  {x+100*razm,y-130*razm}, {x+60*razm,y-30*razm},  {x+130*razm,y},        {x+60*razm,y+20*razm},<br />
+                        ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:24: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:34: warning: narrowing conversion of '((double)y - (razm * 6.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+30*razm,y-60*razm},  {x+100*razm,y-130*razm}, {x+60*razm,y-30*razm},  {x+130*razm,y},        {x+60*razm,y+20*razm},<br />
+                                  ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:34: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:48: warning: narrowing conversion of '((double)x + (razm * 1.0e+2))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+30*razm,y-60*razm},  {x+100*razm,y-130*razm}, {x+60*razm,y-30*razm},  {x+130*razm,y},        {x+60*razm,y+20*razm},<br />
+                                                ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:48: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:59: warning: narrowing conversion of '((double)y - (razm * 1.3e+2))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+30*razm,y-60*razm},  {x+100*razm,y-130*razm}, {x+60*razm,y-30*razm},  {x+130*razm,y},        {x+60*razm,y+20*razm},<br />
+                                                           ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:59: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:73: warning: narrowing conversion of '((double)x + (razm * 6.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+30*razm,y-60*razm},  {x+100*razm,y-130*razm}, {x+60*razm,y-30*razm},  {x+130*razm,y},        {x+60*razm,y+20*razm},<br />
+                                                                         ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:73: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:83: warning: narrowing conversion of '((double)y - (razm * 3.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+30*razm,y-60*razm},  {x+100*razm,y-130*razm}, {x+60*razm,y-30*razm},  {x+130*razm,y},        {x+60*razm,y+20*razm},<br />
+                                                                                   ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:83: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:97: warning: narrowing conversion of '((double)x + (razm * 1.3e+2))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+30*razm,y-60*razm},  {x+100*razm,y-130*razm}, {x+60*razm,y-30*razm},  {x+130*razm,y},        {x+60*razm,y+20*razm},<br />
+                                                                                                 ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:97: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:120: warning: narrowing conversion of '((double)x + (razm * 6.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+30*razm,y-60*razm},  {x+100*razm,y-130*razm}, {x+60*razm,y-30*razm},  {x+130*razm,y},        {x+60*razm,y+20*razm},<br />
+                                                                                                                        ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:120: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:130: warning: narrowing conversion of '((double)y + (razm * 2.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+30*razm,y-60*razm},  {x+100*razm,y-130*razm}, {x+60*razm,y-30*razm},  {x+130*razm,y},        {x+60*razm,y+20*razm},<br />
+                                                                                                                                  ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:209:130: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:24: warning: narrowing conversion of '((double)x + (razm * 1.1e+2))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+110*razm,y+100*razm},{x+20*razm,y+60*razm},   {x,y+120*razm},         {x-20*razm,y+60*razm}, {x-120*razm,y+120*razm},<br />
+                        ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:24: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:35: warning: narrowing conversion of '((double)y + (razm * 1.0e+2))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+110*razm,y+100*razm},{x+20*razm,y+60*razm},   {x,y+120*razm},         {x-20*razm,y+60*razm}, {x-120*razm,y+120*razm},<br />
+                                   ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:35: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:48: warning: narrowing conversion of '((double)x + (razm * 2.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+110*razm,y+100*razm},{x+20*razm,y+60*razm},   {x,y+120*razm},         {x-20*razm,y+60*razm}, {x-120*razm,y+120*razm},<br />
+                                                ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:48: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:58: warning: narrowing conversion of '((double)y + (razm * 6.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+110*razm,y+100*razm},{x+20*razm,y+60*razm},   {x,y+120*razm},         {x-20*razm,y+60*razm}, {x-120*razm,y+120*razm},<br />
+                                                          ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:58: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:75: warning: narrowing conversion of '((double)y + (razm * 1.2e+2))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+110*razm,y+100*razm},{x+20*razm,y+60*razm},   {x,y+120*razm},         {x-20*razm,y+60*razm}, {x-120*razm,y+120*razm},<br />
+                                                                           ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:75: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:97: warning: narrowing conversion of '((double)x - (razm * 2.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+110*razm,y+100*razm},{x+20*razm,y+60*razm},   {x,y+120*razm},         {x-20*razm,y+60*razm}, {x-120*razm,y+120*razm},<br />
+                                                                                                 ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:97: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:107: warning: narrowing conversion of '((double)y + (razm * 6.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+110*razm,y+100*razm},{x+20*razm,y+60*razm},   {x,y+120*razm},         {x-20*razm,y+60*razm}, {x-120*razm,y+120*razm},<br />
+                                                                                                           ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:107: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:120: warning: narrowing conversion of '((double)x - (razm * 1.2e+2))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+110*razm,y+100*razm},{x+20*razm,y+60*razm},   {x,y+120*razm},         {x-20*razm,y+60*razm}, {x-120*razm,y+120*razm},<br />
+                                                                                                                        ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:120: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:131: warning: narrowing conversion of '((double)y + (razm * 1.2e+2))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x+110*razm,y+100*razm},{x+20*razm,y+60*razm},   {x,y+120*razm},         {x-20*razm,y+60*razm}, {x-120*razm,y+120*razm},<br />
+                                                                                                                                   ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:210:131: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:211:24: warning: narrowing conversion of '((double)x - (razm * 6.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x-60*razm,y+10*razm},  {x-120*razm,y}};<br />
+                        ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:211:24: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:211:34: warning: narrowing conversion of '((double)y + (razm * 1.0e+1))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x-60*razm,y+10*razm},  {x-120*razm,y}};<br />
+                                  ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:211:34: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:211:48: warning: narrowing conversion of '((double)x - (razm * 1.2e+2))' from 'double' to 'LONG {aka long int}' inside { } [-Wnarrowing]</font><br />
+                      {x-60*razm,y+10*razm},  {x-120*razm,y}};<br />
+                                                ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:211:48: warning: conversion to 'LONG {aka long int}' from 'double' may alter its value [-Wconversion]</font><br />
+C:\Users\root\source\repos\Multfilm\main.cpp: In function 'int main()':<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:289:36: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
+         drawMan(xMan, yMan, rasmMan);<br />
+                                    ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:309:36: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
+         drawMan(xMan, yMan, rasmMan);<br />
+                                    ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:331:36: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
+         drawMan(xMan, yMan, rasmMan);<br />
+                                    ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:402:32: warning: 'double {anonymous}::TX::random(double, double)' is deprecated (declared at c:\codeblocks\mingw\include\txlib.h:14967) [-Wdeprecated-declarations]</font><br />
+         win[i] = random(0, 1000);<br />
+                                ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:402:32: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:427:36: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
+         drawMan(xMan, yMan, rasmMan);<br />
+                                    ^<br />
+<font color="#0000ff">C:\Users\root\source\repos\Multfilm\main.cpp:442:36: warning: conversion to 'float' from 'double' may alter its value [-Wconversion]</font><br />
+         drawMan(xMan, yMan, rasmMan);<br />
+                                    ^<br />
 ------------------------------------------------------------------------------------------------------<br />
 Autosaving to the Git repository in C:/Users/root/source/repos/Multfilm/.git-auto/... <br />
 g++.exe  -o bin\Debug\Multfilm.exe obj\Debug\main.o     -mwindows<br />
 Output size is 2,18 MB<br />
-<font color="#0000ff">Process terminated with status 0 (0 minutes, 4 seconds)</font><br />
-<font color="#0000ff">0 errors, 21 warnings (0 minutes, 4 seconds)</font><br />
+<font color="#0000ff">Process terminated with status 0 (0 minutes, 7 seconds)</font><br />
+<font color="#0000ff">0 errors, 101 warnings (0 minutes, 7 seconds)</font><br />
 </tt>
 </body>
 </html>

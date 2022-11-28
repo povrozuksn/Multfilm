@@ -30,8 +30,6 @@ void drawDom()
     //дверной проем
     txSetFillColor (RGB(0,0,0));
     txRectangle (360, 380, 460, 550);
-
-
 }
 
 void drawDver(int x_dver, int y_dver)
@@ -55,8 +53,8 @@ void drawSun(int x)
 void drawMan(int x, int y, float rasm)
 {
     //Человек
-    txSetColor (TX_BLACK, 4);
-    txSetFillColor (TX_BLACK);
+    txSetColor (TX_WHITE, 4);
+    txSetFillColor (TX_WHITE);
     //x=630
     txCircle(x, y, 15*rasm);     //голова
     txLine  (x, y+15*rasm, x,         y+70*rasm); //тело
@@ -193,12 +191,14 @@ void drawBuilding(int x, int y, int w, int h, int win[])
 
 }
 
-void drawDialog()
+void drawDialog(int x, int y, int rFont, const char* text)
 {
-    txSetColor (TX_GRAY);
+    //x=640 y=340
+    txSetColor (TX_BLACK);
     txSetFillColor (TX_WHITE);
-    txEllipse(640, 340, 800, 410);
-    txDrawText(640, 340, 800, 410, "Привет");
+    txEllipse(x, y, x+900-640, y+410-340);
+    txSelectFont ("Times New Roman", rFont);
+    txDrawText(x, y, x+900-640, y+410-340, text);
 }
 
 void drawBac(int x, int y, double razm)
@@ -212,10 +212,68 @@ void drawBac(int x, int y, double razm)
     txPolygon (bac, 17);
 }
 
+void drawTitrsBegin(int y)
+{
+    txSetColor(TX_WHITE);
+    txSelectFont ("Arial", 40, 0, FW_BOLD);
+    txDrawText   (100, y, 1100, y+200, "Мультипликацинный фильм\n\n");
+    txSelectFont ("Arial", 60, 0, FW_BOLD);
+    txDrawText   (100, y+100, 1100, y+300, "НОЧНАЯ ПОЕЗДКА");
+}
+
+void drawTitrsFinal(int y)
+{
+    txSetColor(TX_WHITE);
+    txSelectFont ("Arial", 60, 0, FW_BOLD);
+    txDrawText   (100, y, 1100, y+100, "КОНЕЦ");
+    txSelectFont ("Arial", 10);
+    txDrawText   (100, y+200, 1100, y+400, "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+                                          "  eriweuiuiu  qwuriqepriu\n"
+                                          "wfsdalsdkgsd  wjelkjwkjflskjd\n"
+
+
+
+                                          );
+}
+
 int main()
 {
 txCreateWindow (1200, 600);
 
+    int yTitrs = 100;
     int xSun = 100;
     int xMan = 410;
     int yMan = 430;
@@ -231,6 +289,20 @@ txCreateWindow (1200, 600);
     int win[100];
 
 
+    drawNebo(TX_BLACK);
+    drawTitrsBegin(yTitrs);
+    txSleep(2000);
+
+
+    while(yTitrs>-300)
+    {
+        drawNebo(TX_BLACK);
+        drawTitrsBegin(yTitrs);
+        yTitrs -= 1;
+
+        txSleep(20);
+    }
+
     //Меняется погода
     while(xSun < xCloud+200)
     {
@@ -243,7 +315,7 @@ txCreateWindow (1200, 600);
         drawCar(xCar, yCar);
         drawCircle(xCar+35, yCar+40, aCar);
         drawCircle(xCar+185, yCar+40, aCar);
-
+        drawMan(1100, yMan, rasmMan);
 
         drawDver(x_dver, y_dver);
 
@@ -266,6 +338,7 @@ txCreateWindow (1200, 600);
         drawCircle(xCar+35, yCar+40, aCar);
         drawCircle(xCar+185, yCar+40, aCar);
         drawDver(x_dver, y_dver);
+        drawMan(1100, yMan, rasmMan);
 
         x_dver -= 1;
         y_dver += 1;
@@ -287,6 +360,9 @@ txCreateWindow (1200, 600);
         drawCircle(xCar+185, yCar+40, aCar);
         drawDver(x_dver, y_dver);
         drawMan(xMan, yMan, rasmMan);
+        drawMan(1100, yMan, rasmMan);
+        drawDialog(xMan+50, yMan-100, 25, "Привет");
+
 
         xMan = xMan + 5;
         txSleep(1);
@@ -307,7 +383,8 @@ txCreateWindow (1200, 600);
         drawCircle(xCar+185, yCar+40, aCar);
         drawDver(x_dver, y_dver);
         drawMan(xMan, yMan, rasmMan);
-        drawDialog();
+        drawMan(1100, yMan, rasmMan);
+
 
         x_dver += 1;
         y_dver -= 1;
@@ -329,11 +406,30 @@ txCreateWindow (1200, 600);
         drawCircle(xCar+35, yCar+40, aCar);
         drawCircle(xCar+185, yCar+40, aCar);
         drawMan(xMan, yMan, rasmMan);
+        drawMan(1100, yMan, rasmMan);
 
         xMan = xMan + 5;
         txSleep(1);
         txEnd();
     }
+
+
+    drawNebo(RGB (91, 78, 133));
+    drawSun(xSun);
+    drawCloud(xCloud, yCloud);
+    drawZenlya();
+    drawDom();
+    drawDver(x_dver, y_dver);
+    drawCar(xCar, yCar);
+    drawCircle(xCar+35, yCar+40, aCar);
+    drawCircle(xCar+185, yCar+40, aCar);
+    drawMan(xMan, yMan, rasmMan);
+    drawMan(1100, yMan, rasmMan);
+    drawDialog(xMan+50, yMan-100, 17, "Меня зовут кататься на машине");
+    txSleep(1000);
+    drawDialog(1100-300, yMan-100, 17, "Ну и ладно");
+    txSleep(1000);
+
 
     //Человек садится в машину
         txBegin();
@@ -379,9 +475,9 @@ txCreateWindow (1200, 600);
         drawNebo(RGB (91, 78, 133));
         drawZenlya();
 
-        for(int x=50; x<1200; x=x+100)
+        for(int xTree=50; xTree<1200; xTree=xTree+100)
         {
-            drawTree(x);
+            drawTree(xTree);
         }
         drawRoad();
 
@@ -410,7 +506,7 @@ txCreateWindow (1200, 600);
         drawBuilding(70,  400, 160, 370, win);
         drawBuilding(250, 400, 250, 200, win);
         drawBuilding(530, 400, 460, 300, win);
-        drawMan(xMan, yMan, 10);
+        drawMan(xMan, yMan, 5);
 
         xMan = xMan + 5;
         txSleep(1);
@@ -442,10 +538,21 @@ txCreateWindow (1200, 600);
         drawMan(xMan, yMan, rasmMan);
         drawBac(600, 300, razmBac);
 
-        razmBac += 0.01;
-        txSleep(1);
+        razmBac += 0.1;
         txEnd();
     }
+
+    yTitrs = 600;
+    while(yTitrs>-300)
+    {
+        txSetFillColor(TX_BLACK);
+        txRectangle(0,0,1200,600);
+        drawTitrsFinal(yTitrs);
+        yTitrs -= 1;
+
+        txSleep(20);
+    }
+
 
 
 txTextCursor (false);

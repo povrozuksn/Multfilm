@@ -1,0 +1,47 @@
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Multfilm1\bin\Debug\Multfilm1.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13388, функция: bool {anonymous}::TX::txDrawText(double, double, double, double, const char*, unsigned int, HDC),
+
+Сообщение: Параметр y0 = 100 больше, чем y1 = -300. Текст выводиться не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F72FC (32-bit), Flags: CMdRe0, Thread: 0x1A3C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041596E in C:\Users\root\source\repos\Multfilm1\bin\Debug\Multfilm1.exe: txDrawText() at c:/codeblocks/mingw/include/txlib.h (13388)
+
+# 1 0x0041F5E4 in C:\Users\root\source\repos\Multfilm1\bin\Debug\Multfilm1.exe: drawTitrs() at C:/Users/root/source/repos/Multfilm1/main.cpp (221):
+
+    219:     txDrawText   (100, y, 1100, y-400, "Котики говорят:  Мяу!,\n"
+    220:                                       "Собачки говорят: Гав!,\n\n"
+=>  221:                                       "Программисты говорят: Ты КОММИТ НА ГИТХАБ СДЕЛАЛ?!?!!!!");
+    222: }
+    223: 
+
+# 2 0x0041F6CB in C:\Users\root\source\repos\Multfilm1\bin\Debug\Multfilm1.exe: main() at C:/Users/root/source/repos/Multfilm1/main.cpp (245):
+
+    243: 
+    244:     drawNebo(TX_BLACK);
+=>  245:     drawTitrs(100);
+    246:     txSleep(2000);
+    247: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 28 2022 17:17:05, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 28 2022 17:17:11
+
+Run file:	C:\Users\root\source\repos\Multfilm1\bin\Debug\Multfilm1.exe
+Directory:	C:\Users\root\source\repos\Multfilm1
+
+--------------------------------------------------
